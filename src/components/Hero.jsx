@@ -9,7 +9,7 @@ const Hero = () => {
             <nav className='flex justify-between items-center mb-10 pt-3'>
                 {/* <img src={logo} alt="sumz_logo"
                     className='w-28 object-contain' /> */}
-                <h1 className='font-inter font-bold '>BRIEFLY</h1>
+                <h1 className='font-inter font-bold text-lg'>BRIEFLY</h1>
 
                 <button type='button' onClick={() => window.open('https://github.com/AlanWeik')} className='black_btn'>
                     Github

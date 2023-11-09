@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { copy, linkIcon, tick } from '../assets'
+import { useLazyGetSummaryQuery } from '../services/article';
 
 const Demo = () => {
 
@@ -9,8 +10,22 @@ const Demo = () => {
     summary: '',
   });
 
+  const [getSummary, { error, isFetching }] =
+    useLazyGetSummaryQuery();
+
   const handleSubmit = async (e) => {
-    alert('Submitted')
+    e.preventDefault();
+
+    const { data } = await getSummary({ articleUrl: article.url });
+    console.log(data); // Add this line
+
+    if (data?.summary) {
+      const newArticle = { ...article, summary: data.summary };
+
+      setArticle(newArticle);
+
+      console.log(newArticle);
+    }
   };
 
   return (
@@ -29,9 +44,9 @@ const Demo = () => {
           <input type="url"
             placeholder='Enter a URL'
             value={article.url}
-            onChange={(e) => setArticle({
-              article, url: e.target.value
-            })}
+            onChange={(e) => setArticle({ 
+              ...article, url: e.target.value })}
+
             required
             className='url_input peer' />
 
