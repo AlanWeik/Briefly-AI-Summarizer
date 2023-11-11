@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { copy, linkIcon, tick } from '../assets'
+import { copy, linkIcon, tick, loader } from '../assets'
 import { useLazyGetSummaryQuery } from '../services/article';
 
 const Demo = () => {
@@ -109,7 +109,7 @@ const Demo = () => {
           article.summary && (
             <div className='flex flex-col gap-3'>
               <h2 className='font-satoshi font-bold text-gray-600 text-xl'>
-                Article <span className='blue_gradient'></span>
+                Summary<span className='blue_gradient'></span>
               </h2>
               <div className='summary_box'>
                 <p>{article.summary}</p>
