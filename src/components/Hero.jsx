@@ -3,13 +3,12 @@ import { logo } from '../assets';
 
 const Hero = () => {
     return (
-        <header className='w-full justify-center 
-        items-center flex-col'>
+        <header className='w-full flex justify-center items-center flex-col'>
 
-            <nav className='flex justify-between items-center mb-10 pt-3'>
+            <nav className='flex justify-between items-center w-full mb-10 pt-3'>
                 {/* <img src={logo} alt="sumz_logo"
                     className='w-28 object-contain' /> */}
-                <h1 className='font-inter font-bold text-lg'>BRIEFLY</h1>
+                <h1 className='orange_gradient font-inter font-bold text-2xl'>BRIEFLY</h1>
 
                 <button type='button' onClick={() => window.open('https://github.com/AlanWeik')} className='black_btn'>
                     Github
@@ -22,7 +21,7 @@ const Hero = () => {
             </h1>
 
             <h2 className='desc'>
-                Simplify your reading with Summarize, an open-source
+                Simplify your reading with Briefly, an open-source
                 article summarizer that transforms lenghty articles into 
                 clear and concise summaries.
             </h2>

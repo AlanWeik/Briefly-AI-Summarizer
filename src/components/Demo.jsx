@@ -47,7 +47,8 @@ const handleCopy = (copyUrl) => {
 
   return (
     <section className='mt-16 w-full max-w-xl'>
-      {/* { search } */}
+      
+      {/* { Search } */}
       <div className='flex flex-col w-full gap-2'>
         <form className='relative flex 
           justify-center items center' onSubmit={handleSubmit}>
@@ -76,7 +77,7 @@ const handleCopy = (copyUrl) => {
           </button>
         </form>
 
-        {/* BROSWE URL HISTORY */}
+        {/* Browse URL History */}
         <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
           {allArticles.reverse().map((item, index) => (
             <div
