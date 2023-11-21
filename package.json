@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://AlanWeik.github.io/Briefly-AI-Summarizer",
+  "homepage": "https://alanweik.github.io/Briefly-AI-Summarizer/",
 
   "scripts": {
     "dev": "vite",
