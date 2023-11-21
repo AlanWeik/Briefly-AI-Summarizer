@@ -3,16 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://alanweik.github.io/Briefly-AI-Summarizer/",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "vite build && vite build --base /repo-name/ && gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
@@ -32,6 +28,7 @@
     "gh-pages": "^6.1.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-gh-pages": "^0.4.1"
   }
 }
